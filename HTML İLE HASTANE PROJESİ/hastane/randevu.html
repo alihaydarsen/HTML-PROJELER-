@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Al</title>
+    <link rel="icon" href="fotolar/logomuz.ico">
+    <link rel="stylesheet" href="sayfalar.css">
+</head>
+<body style="background-color:rgb(206, 206, 206);">
+<header>
+    <div class="logo">
+        <a href="anasayfa.html"><img src="fotolar/logo.svg" alt="Medipol Sağlık Grubu"></a>
+    </div>
+    <nav>
+        <ul style="position: relative;top: 30px;">
+            <li><a href="anasayfa.html">Anasayfa</a></li>
+            <li><a href="randevu.html">Randevu Al</a></li>
+            <li><a href="doktorlar.html">Doktorlarımız</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="iletişim.html">İletişim</a></li>
+        </ul>
+        <h2 id="Sosyal">Sosyal Medya</h2>
+      <div style="float: right; position: relative;left: 140px;" >
+      <a href="https://www.facebook.com/MedipolSaglik"><img src="fotolar/face.png" title="Medipol Facebook" width="30px" height="30px"></a>
+      <a href="https://www.instagram.com/medipolsaglik/"><img src="fotolar/instagram.png" title="Medipol İnstagram" width="30px" height="30px"></a>
+      <a href="https://www.youtube.com/MedipolSaglik"><img src="fotolar/Youtube.png" title="Medipol Youtube" width="30px" height="30px"></a>
+      <a href="https://x.com/MedipolSaglik"><img src="fotolar/x.png" title="Medipol X" width="30px" height="30px"></a>
+    </div>
+    <a style="text-decoration: none;color: rgb(32, 5, 120);position: relative;left: 890px; top: 40px;" href="http://localhost/hastane/giris.php"><img src="fotolar/kullanıcı.png" title="Yönetici Giriş" width="40px" height="40px" style="float: left;"><b style="position: relative;top: 10px;">Yönetici Girişi</b></a>
+    </nav>
+</header>
+<br>
+<h2 style="text-align: center;">Randevu Al</h2>
+<br>
+<div style="text-align: left;padding-left: 450px;background-image: url(fotolar/hak2.jpeg); height: 400px;padding-top: 200px;border-radius: 50px;border-style: double;">
+    <form action="http://localhost/hastane/randevu.php" method="POST" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" autocomplete="off" target="_blank">
+        <label for="Adı" style="font-size:x-large; background-color: antiquewhite;">İsim:</label>
+        <input type="text" id="Adı" name="Adı" required style="border-radius: 5px;"><br><br>
+
+        <label for="Soyadı" style="font-size: x-large;background-color: antiquewhite;">Soyisim:</label>
+        <input type="text" id="Soyadı" name="Soyadı" style="border-radius: 5px;" required><br><br>
+
+        <label for="Kimlikno" style="font-size: x-large;background-color: antiquewhite;">TC Kimlik Numarası:</label>
+        <input type="text" id="Kimlikno" name="Kimlikno" style="border-radius: 5px;" maxlength="11" minlength="11" required><br><br>
+
+        <label for="Tarih" style="font-size: x-large;background-color: antiquewhite;">Tarih:</label>
+        <input type="date" id="Tarih" name="Tarih" style="font-size: x-large;border-radius: 5px;" required><br><br>
+
+        <label for="Doktor" style="font-size: x-large;background-color: antiquewhite;">Doktor Seç:</label>
+        <select name="Doktor" id="Doktor" style="font-size: x-large; border-radius:5px;" required>
+            <option value="Kalp Damar Cerrahisi:Prof.Dr. Abdulkadir Faruk HÖKENEK">Kalp Damar Cerrahisi:Prof.Dr. Abdulkadir Faruk HÖKENEK</option>
+            <option value="Endokrinoloji ve Metabolizma Hastalıkları:Prof.Dr. Abdulkadir ÖMER">Endokrinoloji ve Metabolizma Hastalıkları:Prof.Dr. Abdulkadir ÖMER</option>
+            <option value="Üroloji:Prof.Dr. Bülent ERKURT">Üroloji:Prof.Dr. Bülent ERKURT</option>
+            <option value="Anestezi ve Reanimasyon:Prof.Dr. Ayda TÜRKÖZ">Anestezi ve Reanimasyon:Prof.Dr. Ayda TÜRKÖZ</option>
+            <option value="İç Hastalıkları:Prof.Dr. Ali MERT">İç Hastalıkları:Prof.Dr. Ali MERT</option>
+            <option value="Diş Hekimi:Prof.Dr. Alev ÖZSOY">Diş Hekimi:Prof.Dr. Alev ÖZSOY</option>
+            <option value="Çocuk Gelişimi:Prof.Dr. Arzu YÜKSELEN">Çocuk Gelişimi:Prof.Dr. Arzu YÜKSELEN</option>
+            <option value="Kadın Hastalıkları ve Doğum:Prof.Dr. Huriye Ayşe PARLAKGÜMÜŞ">Kadın Hastalıkları ve Doğum:Prof.Dr. Huriye Ayşe PARLAKGÜMÜŞ</option>
+            <option value="Dermatoloji:Prof.Dr. Ali BALEVİ">Dermatoloji:Prof.Dr. Ali BALEVİ</option>
+            <option value="Göz Hastalıkları:Prof.Dr. Didem SERİN">Göz Hastalıkları:Prof.Dr. Didem SERİN</option>
+            <option value="Psikolog:Klinik Psikolog Fahriye Nuşin AKBAŞ">Psikolog:Klinik Psikolog Fahriye Nuşin AKBAŞ</option>
+            <option value="KBB:Prof.Dr. Fevzi Sefa DEREKÖY">KBB:Prof.Dr. Fevzi Sefa DEREKÖY</option>
+        </select><br><br>
+
+        <input type="submit" name="RandevuAl" id="RandevuAl" style="font-size: x-large;background-color: antiquewhite; border-radius: 55px;" value="Randevu Al">
+    </form>
+</div>  
+<br>
+<div style="background-color: rgb(166, 167, 166); height: 130px; text-align: center;">
+    <img src="fotolar/logo.svg" alt="" height="130" width="150">
+    <img src="fotolar/arama.svg" alt="" height="130" width="150" style="text-align: right;">
+</div>
+
+</body>
+</html>
